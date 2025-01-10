@@ -1,6 +1,9 @@
 # streamlit_app.py
 import streamlit as st
+from app.chatbot import generate_response
+from app.scraper import get_recipe
 import os
+import random
 from PIL import Image
 from app.ml_model import predict_image, evaluate_model, train_dataset
 import pandas as pd
@@ -59,6 +62,39 @@ if uploaded_file is not None:
     # Display the nutritional information
     st.write("Nutritional Information:")
     st.write(nutrition)
+
+
+# Input from user
+st.title("Chat with the Food Bot")
+
+# Input from user
+user_input = st.text_input("Ask me anything about food:")
+
+# Frontend code
+if user_input:
+    # Check if the user is asking for a recipe
+    if "recipe" in user_input.lower():
+        # Extract the food item from the user input
+        food_item = user_input.lower().replace("recipe", "").strip()
+        if food_item:
+            st.write(f"Fetching recipe for: {food_item.capitalize()}")
+            try:
+                # Call the get_recipe function
+                recipe = get_recipe(food_item)
+                st.write(recipe)
+            except Exception as e:
+                st.error(f"Could not fetch recipe: {e}")
+        else:
+            st.warning("Please specify a food item for the recipe.")
+    else:
+        # Otherwise, use the chatbot to generate a response
+        response = generate_response(user_input)
+        st.write(response)
+
+# Example usage to test the function
+food_item = random.choice(["burger", "butter_naan", "chai", "chapati", "chole bhature", "dal makhani", "dhokla", "fried_rice", "idli", "jalebi", "kaathi rolls", "kadai paneer", "kulfi", "masala dosa", "momos", "paani puri", "pakode", "pav bhaji", "pizza", "samosa"])
+print(get_recipe(food_item))
+
 
 # Evaluate the model
 if st.button("Evaluate Model"):
