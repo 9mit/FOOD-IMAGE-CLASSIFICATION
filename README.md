@@ -4,6 +4,11 @@ A deep learning project for classifying **20 categories** of Indian and internat
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1aHg030xsHIfnKGO6UMQM0FicHG-LmDHA?usp=sharing)
 
+![WhatsApp Image 2025-12-28 at 1 53 31 AM](https://github.com/user-attachments/assets/53c3e7b6-b344-458c-972d-3befd40d6ce0)
+![WhatsApp Image 2025-12-28 at 1 54 06 AM](https://github.com/user-attachments/assets/0a6b445d-a936-4732-abb1-2f40e0a556da)
+![WhatsApp Image 2025-12-28 at 1 54 40 AM](https://github.com/user-attachments/assets/a907da38-9dc2-474d-b582-5db12f213020)
+
+
 ## 📊 Results (Kaggle GPU - Tesla T4)
 
 | Model | Test Accuracy | Best Val Accuracy | Parameters | Training Time |
