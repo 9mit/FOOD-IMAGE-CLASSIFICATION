@@ -1,0 +1,54 @@
+# ============================================
+# Food Image Classification - .gitignore
+# ============================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+!foodimage-ipynb.ipynb
+
+# Model weights (uncomment to exclude large files)
+# ml_models/*.pth
+# ml_models/*.pt
+
+# Data directories (uncomment to exclude training data)
+# data/train/
+# data/test/
+
+# Generated files
+*.log
+logs/
+evaluation/plots/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment
+.env
+.env.local

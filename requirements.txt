@@ -1,15 +1,30 @@
-streamlit
-torch
-torchvision
-scikit-learn
-pandas
-numpy
-opencv-python
-matplotlib
-seaborn
-transformers
-chatbot
-requests
-beautifulsoup4
-beautifulsoup4==4.12.2
-requests==2.31.0
+# Food Image Classification - Requirements
+# ==========================================
+# Install with: pip install -r requirements.txt
+
+# Core ML Framework
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Data Science
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# Image Processing
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Web Application
+streamlit>=1.28.0
+
+# NLP (for chatbot feature)
+transformers>=4.35.0
+
+# Web Scraping (for recipe feature)
+beautifulsoup4>=4.12.0
+requests>=2.31.0
